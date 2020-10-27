@@ -1,0 +1,2 @@
+# LittlePractice
+Some personal exercises
