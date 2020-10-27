@@ -1,0 +1,38 @@
+/*
+ * Promblem  输入一个数组，输入一个数字
+ * 	若数组中有两个数相加等于输入的数字，返回true
+ * Author 小渣渣
+ */
+package com.edu.practice;
+
+public class AddSolution {
+	public static int[] twoSum(int[] nums, int target) {
+		int[] result = new int[2];
+		int i=0;
+		int j=0;
+		boolean flag=false;
+		for(i=0;i<=nums.length-1;i++) {
+			for (j=i+1; j <=nums.length-1; j++) {
+				if(nums[i]+nums[j]==target) {
+					result[0]=i;
+					result[1]=j;
+					flag=true;
+					break;
+				}
+			}
+			if(flag)
+				break;
+		}	
+		return result;
+    }
+	public static void main(String[] args) {
+		int[] index=null;
+		int[] nums = {3,2,4};
+		int target = 6;
+		index=twoSum(nums,target);
+		for(int i=0;i<index.length;i++) {
+			System.out.println(index[i]);
+		}
+	}
+
+}
